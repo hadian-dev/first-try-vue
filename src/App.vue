@@ -1,20 +1,35 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import TodoListVue from './components/TodoList.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  
+  </div> -->
+  <img src="./assets/background.svg" id="background" alt="" />
+  <Header />
+  <TodoListVue />
+  <Footer />
+  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
+#background {
+  position: fixed;
+  top: -16px;
+  left: -25px;
+  width: 124%;
+  height: 104%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
