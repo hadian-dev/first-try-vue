@@ -1,22 +1,24 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue';
 import Header from './components/Header.vue';
 import TodoListVue from './components/TodoList.vue';
 import Footer from './components/Footer.vue';
+
+const showCheckBox = ref(false);
+
+function setShowCheckBox(value: boolean) {
+  showCheckBox.value = value;
+}
 </script>
 
 <template>
-  <!-- <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-  
-  </div> -->
   <img src="./assets/background.svg" id="background" alt="" />
   <Header />
-  <TodoListVue />
-  <Footer />
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <TodoListVue :show-check-box="showCheckBox" />
+  <Footer
+    :show-check-box="showCheckBox"
+    @set-show-check-box="setShowCheckBox"
+  />
 </template>
 
 <style scoped>

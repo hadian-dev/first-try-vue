@@ -2,20 +2,45 @@
 import CheckIcon from './icons/CheckIcon.vue';
 import CalenderIcon from './icons/CalenderIcon.vue';
 import PlusIcon from './icons/PlusIcon.vue';
+import DoubleCheckIcon from './icons/DoubleCheckIcon.vue';
+import CloseIcon from './icons/CloseIcon.vue';
+defineProps<{ showCheckBox: boolean }>();
 </script>
 
 <template>
-  <footer>
-    <button class="check-button">
-      <CheckIcon />
-    </button>
-    <button class="calender-button">
-      <CalenderIcon />
-    </button>
-    <button class="plus-button">
-      <PlusIcon />
-    </button>
-  </footer>
+  <div>
+    <footer
+      :style="[
+        showCheckBox
+          ? { opacity: 0, zIndex: '0' }
+          : { opacity: 1, zIndex: '10' },
+      ]"
+    >
+      <button class="check-button" @click="$emit('setShowCheckBox', true)">
+        <CheckIcon />
+      </button>
+      <button class="calender-button">
+        <CalenderIcon />
+      </button>
+      <button class="plus-button">
+        <PlusIcon />
+      </button>
+    </footer>
+    <footer
+      :style="[
+        showCheckBox
+          ? { opacity: 1, zIndex: '10' }
+          : { opacity: 0, zIndex: '0' },
+      ]"
+    >
+      <button class="check-button" @click="$emit('setShowCheckBox', false)">
+        <DoubleCheckIcon />
+      </button>
+      <button class="close-button" @click="$emit('setShowCheckBox', false)">
+        <CloseIcon />
+      </button>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
@@ -29,6 +54,7 @@ footer {
   z-index: 10;
   bottom: 0;
   left: 0;
+  transition: all 200ms ease-in;
   background: #e8ecfd;
   background: -webkit-linear-gradient(
     0deg,
