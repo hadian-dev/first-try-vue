@@ -14,6 +14,7 @@
   align-items: center;
   border-radius: 50%;
   background: #fe1e9a;
+  user-select: none;
   background: -webkit-linear-gradient(182deg, #fe1e9a 0%, #fea64c 100%);
   background: linear-gradient(182deg, #fe1e9a 0%, #fea64c 100%);
 }

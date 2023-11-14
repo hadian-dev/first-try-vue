@@ -1,11 +1,11 @@
 <template>
-  <div class="check-icon">
+  <div class="plus-icon">
     <img src="../../assets/plus-icon.svg" alt="plus" />
   </div>
 </template>
 
 <style scoped>
-.check-icon {
+.plus-icon {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
@@ -13,12 +13,13 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  user-select: none;
   background: #254dde;
   background: -webkit-linear-gradient(50deg, #254dde 0%, #00ffff 100%);
   background: linear-gradient(50deg, #254dde 0%, #00ffff 100%);
 }
 
-.check-icon img {
+.plus-icon img {
   width: 16px;
   height: 16px;
   object-fit: contain;

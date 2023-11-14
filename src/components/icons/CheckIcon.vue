@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  user-select: none;
   background: #254dde;
   background: -webkit-linear-gradient(50deg, #254dde 0%, #fe1e9a 100%);
   background: linear-gradient(50deg, #254dde 0%, #fe1e9a 100%);

@@ -5,6 +5,9 @@
 </template>
 
 <style scoped>
+.menu-icon {
+  user-select: none;
+}
 .menu-icon img {
   width: 28px;
   height: 24px;
