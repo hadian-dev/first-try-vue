@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import ShoppingIcon from './icons/ShoppingIcon.vue';
 import Checkbox from './Checkbox.vue';
+import CheckIcon from './icons/CheckIcon.vue';
 
-defineProps<{ title: string; checked: boolean; showCheckBox?: boolean }>();
+defineProps<{
+  title: string;
+  checked: boolean;
+  showCheckBox?: boolean;
+  completed?: boolean;
+}>();
 </script>
 
 <template>
   <div class="todo-card">
     <ShoppingIcon />
-    <span class="status" />
+    <CheckIcon v-if="completed" class="check-icon" />
+    <span v-else class="status" />
     <h5 @title="title" class="todo-title">{{ title }}</h5>
     <div class="todo-option-box">
       <div
@@ -48,6 +55,13 @@ defineProps<{ title: string; checked: boolean; showCheckBox?: boolean }>();
   -moz-box-shadow: 1.5px 1.5px 5px 1.5px #dddddd;
   box-shadow: 1.5px 1.5px 5px 1.5px #dddddd;
 }
+
+.check-icon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
 .status {
   width: 8px;
   height: 8px;

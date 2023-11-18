@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TodoCard from './TodoCard.vue';
 
-defineProps<{ showCheckBox: boolean }>();
+defineProps<{ showCheckBox?: boolean }>();
 
 const todoList = [
   {

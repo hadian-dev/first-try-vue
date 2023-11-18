@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import CheckIcon from './icons/CheckIcon.vue';
 import CalenderIcon from './icons/CalenderIcon.vue';
 import PlusIcon from './icons/PlusIcon.vue';
 import DoubleCheckIcon from './icons/DoubleCheckIcon.vue';
 import CloseIcon from './icons/CloseIcon.vue';
+import CircleCheckIcon from './icons/CircleCheckIcon.vue';
 defineProps<{ showCheckBox: boolean }>();
 </script>
 
@@ -17,7 +17,7 @@ defineProps<{ showCheckBox: boolean }>();
       ]"
     >
       <button class="check-button" @click="$emit('setShowCheckBox', true)">
-        <CheckIcon />
+        <CircleCheckIcon />
       </button>
       <button class="calender-button">
         <CalenderIcon />

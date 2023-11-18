@@ -1,14 +1,9 @@
-<script setup lang="ts">
-import MenuIcon from './icons/MenuIcon.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header>
     <div class="container">
-      <h1>TODO</h1>
-      <button>
-        <MenuIcon />
-      </button>
+      <slot />
     </div>
   </header>
 </template>
@@ -31,18 +26,5 @@ header {
     #ffffff 100%
   );
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-}
-
-.container h1 {
-  font-weight: 400;
-}
-
-.container button {
-  padding: 4px 6px;
-  position: absolute;
-  right: 16px;
-  top: 18px;
-  z-index: 2;
-  background-color: transparent;
 }
 </style>
